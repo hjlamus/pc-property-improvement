@@ -199,7 +199,7 @@ function setLanguage(lang) {
 
     // Translate input placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-        const key = element.dataset.i18n-placeholder;
+        const key = element.getAttribute('data-i18n-placeholder');
         if (translations[lang][key]) {
             element.setAttribute('placeholder', translations[lang][key]);
         }
